@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Działania matematyczne</title>
+    <link rel="stylesheet" href="styl.css" />
+  </head>
+  <body>
+    <div class="baner1"><img src="logo.jpg" alt="matematyka" /></div>
+    <div class="baner2">
+      <h1>Pomocnik Matematyczny</h1>
+    </div>
+    <div class="baner3">
+      <a href="dzialania.html"><h4>Działania</h4></a>
+    </div>
+    <div class="baner4">
+      <a href="dzialania.html"><h4>Tabliczka mnozenia</h4></a>
+    </div>
+    <div class="lewy">
+      <h3>Proste działania</h3>
+      Liczba A: <input type="number" name="liczbaA" id="A" /><br />
+      Liczba B: <input type="number" name="liczbaB" id="B" /> <br />
+      <button id="dodawanie" onclick="skrypt1()">+</button>
+      <button id="odejmowanie" onclick="skrypt2()">-</button>
+      <button id="mnozenie" onclick="skrypt3()">*</button>
+      <button id="dzielenie" onclick="skrypt4()">/</button>
+      <button id="potęgowanie" onclick="skrypt5()">A^B</button>
+      <p id="wynik"></p>
+    </div>
+    <div class="prawy">
+      <ul>
+        <li>dodawanie</li>
+        <li>odejmowanie</li>
+        <li>mnozenie</li>
+        <li>dzielenie</li>
+        <li>potęgowanie</li>
+      </ul>
+    </div>
+    <div class="stopka">
+      <p>Autor: 0000000000</p>
+    </div>
+    <script>
+      function skrypt1() {
+        var A = +document.getElementById("A").value;
+        var B = parseInt(document.getElementById("B").value);
+        var suma = A + B;
+        var zmiana = document.getElementById("wynik");
+        zmiana.innerHTML = "Wynik: " + suma;
+      }
+      function skrypt2() {
+        var A = parseInt(document.getElementById("A").value);
+        var B = parseInt(document.getElementById("B").value);
+
+        var roz = A - B;
+
+        var zmiana = document.getElementById("wynik");
+        zmiana.innerHTML = "Wynik: " + roz;
+      }
+      function skrypt3() {
+        var A = parseInt(document.getElementById("A").value);
+        var B = parseInt(document.getElementById("B").value);
+
+        var mult = A * B;
+
+        var zmiana = document.getElementById("wynik");
+        zmiana.innerHTML = "Wynik: " + mult;
+      }
+      function skrypt4() {
+        var A = parseInt(document.getElementById("A").value);
+        var B = parseInt(document.getElementById("B").value);
+
+        var dzie = A / B;
+
+        var zmiana = document.getElementById("wynik");
+        zmiana.innerHTML = "Wynik: " + dzie;
+      }
+      function skrypt5() {
+        var A = parseInt(document.getElementById("A").value);
+        var B = parseInt(document.getElementById("B").value);
+
+        var pot = A ** B;
+        var zmiana = document.getElementById("wynik");
+        zmiana.innerHTML = "Wynik: " + pot;
+      }
+    </script>
+  </body>
+</html>

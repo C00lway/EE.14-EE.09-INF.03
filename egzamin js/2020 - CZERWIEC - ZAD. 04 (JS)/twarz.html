@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styl.css" />
+    <script src="skrypt.js"></script>
+  </head>
+  <body>
+    <div class="lewy1">
+      <h2>W ofercie</h2>
+      <ul>
+        <li><a href="twarz.html">Zabiegi na twarz</a></li>
+        <ol>
+          <li>Piling</li>
+          <li>Maska</li>
+          <li>regulacja brwi</li>
+        </ol>
+        <li>Masaż</li>
+        <li>Diety oczyszczjące</li>
+      </ul>
+      <a href="index.html">Do strony głównej</a>
+    </div>
+    <div class="prawy1"><h1>Salon Kosmetyczny</h1></div>
+    <div class="prawy2">
+      <h2>Sprawdź cene swojej wizyty</h2>
+
+      <input type="checkbox" name="Piling" id="c1" />Piling <br />
+      <input type="checkbox" name="Maska" id="c2" />Maska <br />
+      <input type="checkbox" name="Masaż twarzy" id="c3" />Masaż twarzy <br />
+      <input type="checkbox" name="Regulacja brwi" id="c4" />Regulacja brwi <br />
+      <button onclick="policz()">Sprawdź cenę</button> <br />
+      <span id="suma"></span>
+      <script>
+        function policz() {
+          var cena = 0;
+          if (document.getElementById("c1").checked) cena += 45;
+          if (document.getElementById("c2").checked) cena += 30;
+          if (document.getElementById("c3").checked) cena += 20;
+          if (document.getElementById("c4").checked) cena += 5;
+          document.getElementById("suma").innerHTML = "Cena zabiegów: " + cena;
+        }
+      </script>
+    </div>
+    <div class="lewy2">
+      <img src="obraz1.jpg" alt="Kosmetyczka" />
+    </div>
+
+    <div class="stopka">
+      <p>Autor:00000000</p>
+    </div>
+  </body>
+</html>

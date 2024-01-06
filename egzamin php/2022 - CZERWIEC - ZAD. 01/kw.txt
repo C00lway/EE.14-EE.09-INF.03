@@ -1,0 +1,7 @@
+SELECT id, nazwa, wystepowanie FROM ryby WHERE styl_zycia like 1;
+SELECT ryby_id, wymiar_ochronny from okres_ochronny WHERE wymiar_ochronny <30;
+
+SELECT nazwa, akwen, wojewodztwo FROM ryby JOIN lowisko ON
+ryby.id = lowisko.Ryby_id WHERE rodzaj=3;
+
+ALTER TABLE ryby ADD dobowy_limit TINYINT unsigned;

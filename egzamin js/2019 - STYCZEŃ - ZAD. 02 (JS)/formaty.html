@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formatowanie</title>
+    <link rel="stylesheet" href="styl2.css" />
+  </head>
+  <body>
+    <div class="baner"><h1>Formatowanie dokumentow HTML</h1></div>
+    <div class="gorny1">
+      <h2>Przykład listy - hobby</h2>
+      <ul>
+        <li>muzyka</li>
+        <li>turystyka</li>
+        <ol>
+          <li>góry</li>
+          <li>jeziora</li>
+          <li>na rowerze</li>
+        </ol>
+        <li>książki</li>
+      </ul>
+    </div>
+    <div class="gorny2">
+      <h2>Przykład tabeli - rozkład dnia</h2>
+      <table>
+        <tr>
+          <th>Pora dnia</th>
+          <th>obowiązki</th>
+        </tr>
+        <tr>
+          <td>rano</td>
+          <td>nauka</td>
+        </tr>
+        <tr>
+          <td>południe</td>
+          <td>zajęcia dodatkowe</td>
+        </tr>
+        <tr>
+          <td>popołudnie</td>
+          <td rowspan="2">moje hobby</td>
+        </tr>
+        <tr>
+          <td>wieczór</td>
+        </tr>
+      </table>
+    </div>
+    <div class="gorny3">
+      <img src="napisy.png" alt="technologia web" />
+    </div>
+    <div class="glowny">
+      <p>Podaj rozmiar tekstu w procentach: <input type="number" id="numer" />%</p>
+      <p>
+        <select id="wybierz">
+          <option class="prosty" value="1">prosty</option>
+          <option class="kursywa" value="2">kursywa</option>
+        </select>
+      </p>
+      <p>jakim kolorem sformatowac tekst? Wybierz przycisk</p>
+      <button id="b1" onclick="skrypt1()"></button>
+      <button id="b2" onclick="skrypt2()"></button>
+      <button id="b3" onclick="skrypt3()"></button>
+      <p id="zmiana">To jest przykład paragrafu który moze być dowolnie formatowany przez javaScript</p>
+    </div>
+    <div class="stopka">
+      <p>Formatowaniem tekstu zajmował się: <i>000000000</i></p>
+      <a href="formatowanie.pl" target="_blank">Odwiedź także</a>
+    </div>
+    <script>
+      function skrypt1() {
+        // wartosc z inputa numer
+        var numer = document.getElementById("numer").value;
+        if (numer != null) {
+          document.getElementById("zmiana").style.fontSize = numer + "%";
+        }
+        var styl = document.getElementById("wybierz").value;
+
+        if ((styl = 2)) {
+          document.getElementById("zmiana").style.fontStyle = "italic";
+        }
+        document.getElementById("zmiana").style.color = "red";
+      }
+      function skrypt2() {
+        // wartosc z inputa numer
+        var numer = document.getElementById("numer").value;
+        if (numer != null) {
+          document.getElementById("zmiana").style.fontSize = numer + "%";
+        }
+        var styl = document.getElementById("wybierz").value;
+
+        if ((styl = 2)) {
+          document.getElementById("zmiana").style.fontStyle = "italic";
+        }
+        document.getElementById("zmiana").style.color = "green";
+      }
+      function skrypt3() {
+        // wartosc z inputa numer
+        var numer = document.getElementById("numer").value;
+        if (numer != null) {
+          document.getElementById("zmiana").style.fontSize = numer + "%";
+        }
+        var styl = document.getElementById("wybierz").value;
+
+        if ((styl = 2)) {
+          document.getElementById("zmiana").style.fontStyle = "italic";
+        }
+        document.getElementById("zmiana").style.color = "blue";
+      }
+    </script>
+  </body>
+</html>

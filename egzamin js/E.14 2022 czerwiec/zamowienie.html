@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fabryka cukierków</title>
+    <link rel="stylesheet" href="styl10.css" />
+  </head>
+  <body>
+    <div class="gorny1">
+      <a class="zamowienie" href="zamowienie.html">Zamów cukierki</a>
+    </div>
+    <div class="gorny2">
+      <a href="index.html"><img src="cukierki2.png" alt="Nasze logo" /></a>
+    </div>
+    <div class="baner">
+        <h1>Strefa zamówienia</h1>
+    </div>
+    <div class="lewy">
+        <span>Numer kształtu</span>
+    <input type="number" id="numer">
+    <br><span>Skomponuj swój kolor, podaj RGB</span> <br>
+    R:<input type="number" id="R">
+    G:<input type="number" id="G">
+    B:<input type="number" id="B">
+    <button onclick="skrypt()">Zamówienie</button>
+    <p id="zmiana">Twoje zamówienie</p>
+    <button id="kolor">Kolor</button>
+
+
+    </div>
+    <div class="prawy">
+      <h2>Nasza oferta</h2>
+      <table>
+        <tr>
+          <td>Kształty</td>
+          <td rowspan="2">Możesz zamówic</br>dowolny kolor cukierka</td>
+        </tr>
+        <tr>
+          <td><ol>
+            <li>cytryna</li>
+            <li>liść</li>
+            <li>banan</li>
+          </ol></td>
+        </tr>
+      </table>
+    </div>
+    <div class="stopka"><span>
+        Autor strony:<b> 000000000000</b>
+    </span></div>
+    <script>
+        function skrypt(){
+            var ksztalt = document.getElementById('numer').value
+            var zmiana = document.getElementById('zmiana')
+if(ksztalt != ''){
+    zmiana.innerHTML = " Twoje zamówienie to cukierek"
+    if(ksztalt == '1'){
+      zmiana.innerHTML = " Twoje zamówienie to cukierek cytryna"
+    }
+    else if(ksztalt == '2'){
+      zmiana.innerHTML = " Twoje zamówienie to cukierek liść"
+    }
+    else if(ksztalt == '3'){
+      zmiana.innerHTML = " Twoje zamówienie to cukierek banan"
+    }
+    else{
+        zmiana.innerHTML="Twoje zamówienie to cukierek inny"
+    }
+}
+var kolor = document.getElementById('kolor')
+var r = document.getElementById('R').value
+var g = document.getElementById('G').value
+var b = document.getElementById('B').value
+kolor.style.backgroundColor = "rgb("+r+", " +g+", " +b+")"
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+SELECT imie, nazwisko, adres, miasto, czyRODO, czyBadania FROM pracownicy WHERE id=2;
+
+SELECT COUNT(*) FROM `pracownicy` ;
+
+SELECT id, imie, nazwisko FROM pracownicy WHERE id = 2;
+
+SELECT pracownicy.id, nazwa, opis FROM pracownicy JOIN stanowiska
+ON stanowiska.id=pracownicy.stanowiska_id WHERE pracownicy.id=2;

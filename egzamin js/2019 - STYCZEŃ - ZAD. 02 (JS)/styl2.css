@@ -1,0 +1,60 @@
+html {
+  font-family: Georgia;
+}
+.baner {
+  background-color: #824555;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.gorny1,
+.gorny2 {
+  background-color: #a26475;
+  color: white;
+  width: 30%;
+  height: 300px;
+  float: left;
+}
+.gorny3 {
+  background-color: #a26475;
+  color: white;
+  width: 40%;
+  height: 300px;
+  text-align: right;
+  float: left;
+}
+.glowny {
+  background-color: #f0eae2;
+  padding: 50px;
+}
+.stopka {
+  background-color: #824555;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+table,
+td,
+th {
+  border: 2px solid #69293a;
+  padding: 7px;
+  border-collapse: collapse;
+}
+ul {
+  list-style-type: square;
+}
+#b1 {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+#b2 {
+  height: 50px;
+  width: 50px;
+  background-color: green;
+}
+#b3 {
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+}
